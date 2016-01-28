@@ -9,7 +9,7 @@ public class Turtle {
     }
 
     public void doSwimming() {
-        if(state.getClass().equals(SleepingState.class)){
+        if(state instanceof SleepingState){
             updateState(new EatingState(this));
         } else {
             updateState(new SleepingState(this));
